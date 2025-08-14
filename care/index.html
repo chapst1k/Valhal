@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Valhal Exotics • Care Sheets</title>
+    <meta name="description" content="Care sheets written from hands-on experience." />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <style>
+        /* Two-column grid for specific sections */
+        
+        @media (min-width:720px) {
+            .grid-2 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a class="brand" href="../index.html">Valhal Exotics</a>
+            <nav class="nav" aria-label="Main">
+                <a href="../animals.html">Animals</a>
+                <a href="index.html">Care Sheets</a>
+                <a href="https://www.morphmarket.com/stores/valhalexotics/" target="_blank" rel="noopener">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Care Sheets</h1>
+        <p class="muted">Click a species to read and print.</p>
+
+        <!-- Search -->
+        <input id="careSearch" placeholder="Search care sheets…" style="width:100%;padding:.6rem .9rem;border-radius:12px;
+             background:var(--panel);border:1px solid var(--ring);
+             color:var(--text);margin:12px 0 6px;" aria-label="Search care sheets">
+
+        <p id="noResults" class="muted" style="display:none;margin:0 0 18px;">
+            No care sheets match your search.
+        </p>
+
+        <!-- Hognose & Blue Tongue Section -->
+        <section class="care-group" data-group="hognose-blue">
+            <h2>Hognose Snakes & Blue Tongue Skinks</h2>
+            <div class="grid-2">
+                <!-- Hognose -->
+                <article class="card">
+                    <h3>Western Hognose</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="western-hognose.html">Read Care</a>
+                </article>
+
+                <!-- Blue Tongue -->
+                <article class="card">
+                    <h3>Blue Tongue Skink</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="blue-tongue-skink.html">Read Care</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Mantids Section -->
+        <section id="mantids" class="care-group" data-group="mantids">
+            <h2>Mantids</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3>African Twig Mantis (Popa spurca)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="african-twig-mantis-popa-spurca.html">Read Care</a>
+                </article>
+                <article class="card">
+                    <h3>Asian Flower Mantis (Creobroter apicalis)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="asian-flower-mantis-creobroter-apicalis.html">Read Care</a>
+                </article>
+                <article class="card">
+                    <h3>Budwing Mantis (Parasphendale agrionina)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="budwing-mantis-parasphendale-agrionina.html">Read Care</a>
+                </article>
+                <article class="card">
+                    <h3>Dead Leaf Mantis (Deroplatys gorochovi)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="dead-leaf-mantis-deroplatys-gorochovi.html">Read Care</a>
+                </article>
+                <article class="card">
+                    <h3>European Mantis (Mantis religiosa)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="european-mantis-mantis-religiosa.html">Read Care</a>
+                </article>
+                <article class="card">
+                    <h3>Ghost Mantis (Phyllocrania paradoxa)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="ghost-mantis-phyllocrania-paradoxa.html">Read Care</a>
+                </article>
+                <article class="card">
+                    <h3>Northern Grass Mantis (Brunneria borealis)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="northern-grass-mantis-brunneria-borealis.html">Read Care</a>
+                </article>
+                <article class="card">
+                    <h3>Northern Walking Stick (Diapheromera femorata)</h3>
+                    <p>Read husbandry details and feeding notes.</p>
+                    <a class="btn" href="northern-walking-stick-diapheromera-femorata.html">Read Care</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">© <span id="y"></span> Valhal Exotics LLC</div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Section-aware search -->
+    <script>
+        (function() {
+            const input = document.getElementById('careSearch');
+            const groups = Array.from(document.querySelectorAll('.care-group'));
+            const emptyMsg = document.getElementById('noResults');
+
+            function applyFilter() {
+                const q = (input.value || '').toLowerCase().trim();
+                let anyVisible = false;
+
+                groups.forEach(group => {
+                    const cards = Array.from(group.querySelectorAll('.card'));
+                    let visibleInGroup = 0;
+
+                    cards.forEach(card => {
+                        const match = card.textContent.toLowerCase().includes(q);
+                        card.style.display = match ? '' : 'none';
+                        if (match) visibleInGroup++;
+                    });
+
+                    const showGroup = visibleInGroup > 0 || q === '';
+                    group.style.display = showGroup ? '' : 'none';
+                    if (showGroup && visibleInGroup > 0) anyVisible = true;
+                });
+
+                if (q === '') {
+                    emptyMsg.style.display = 'none';
+                    return;
+                }
+                emptyMsg.style.display = anyVisible ? 'none' : 'block';
+            }
+
+            applyFilter();
+            input.addEventListener('input', applyFilter);
+        })();
+    </script>
+</body>
+
+</html>
