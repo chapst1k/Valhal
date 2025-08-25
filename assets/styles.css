@@ -355,3 +355,154 @@ footer {
     scroll-margin-top: 90px;
     /* same as header height + some padding */
 }
+
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.food-availability {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+    /* keeps months readable on phones */
+    font-size: 0.95rem;
+}
+
+.food-availability caption {
+    text-align: left;
+    font-weight: 600;
+    padding: 10px 12px;
+}
+
+.food-availability th,
+.food-availability td {
+    border: 1px solid #ddd;
+    padding: 6px 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.food-availability thead th {
+    background: #f7f7f7;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.food-availability td:first-child,
+.food-availability th:first-child {
+    text-align: left;
+    white-space: normal;
+    min-width: 220px;
+}
+
+
+/* Color by data value */
+
+.food-availability td[data-val="good"] {
+    color: #1a7f37;
+    font-weight: 700;
+}
+
+.food-availability td[data-val="limited"] {
+    color: #b26b00;
+    font-weight: 700;
+}
+
+.food-availability td[data-val="none"] {
+    color: #777;
+    font-weight: 600;
+}
+
+
+/* Print-friendly tweaks */
+
+@media print {
+    .table-scroll {
+        overflow: visible;
+        border: none;
+    }
+    .food-availability {
+        min-width: auto;
+        font-size: 11pt;
+    }
+    .btn.print {
+        display: none !important;
+    }
+}
+
+.footer {
+    border-top: 1px solid #eee;
+    padding: 16px 0;
+}
+
+.footer__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    flex-wrap: wrap;
+    /* allows wrapping so items don’t squish */
+}
+
+.footer__brand {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+
+.footer__links {
+    flex: 2 1 320px;
+    /* center block grows most */
+    display: flex;
+    gap: 12px 18px;
+    justify-content: center;
+    /* keeps links centered across the row */
+    flex-wrap: wrap;
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: inherit;
+    opacity: .9;
+}
+
+.footer__links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer__social {
+    flex: 1 1 200px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    /* pins social to the right on desktop */
+}
+
+.footer .social {
+    display: inline-flex;
+    line-height: 0;
+    color: #3b5998;
+}
+
+.footer .social:hover {
+    opacity: .85;
+}
+
+
+/* Mobile tweaks */
+
+@media (max-width: 640px) {
+    .footer__wrap {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .footer__links,
+    .footer__social {
+        justify-content: center;
+    }
+}

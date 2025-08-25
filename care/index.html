@@ -18,19 +18,19 @@
             }
         }
     </style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+  $("#header").load("/partials/header.html");
+  $("#footer").load("/partials/footer.html");
+});
+</script>
+
 </head>
 
 <body>
-    <header class="header">
-        <div class="container nav">
-            <a class="brand" href="../index.html">Valhal Exotics</a>
-            <nav class="nav" aria-label="Main">
-                <a href="../animals.html">Animals</a>
-                <a href="index.html">Care Sheets</a>
-                <a href="https://www.morphmarket.com/stores/valhalexotics/" target="_blank" rel="noopener">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <main class="container">
         <h1>Care Sheets</h1>
@@ -113,9 +113,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">© <span id="y"></span> Valhal Exotics LLC</div>
-    </footer>
+    <div id="footer"></div>
 
     <script src="../assets/script.js"></script>
     <script>

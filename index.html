@@ -2,24 +2,27 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Valhal Exotics LLC • Home</title>
     <meta name="description" content="Healthy captive-bred animals and clear care information." />
     <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("/partials/header.html");
+            $("#footer").load("/partials/footer.html");
+        });
+    </script>
+
 </head>
 
 <body>
-    <header class="header">
-        <div class="container nav">
-            <a class="brand" href="index.html">Valhal Exotics</a>
-            <nav class="nav" aria-label="Main">
-                <a href="animals.html">Animals</a>
-                <a href="care/index.html">Care Sheets</a>
-                <a href="https://www.morphmarket.com/stores/valhalexotics/">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <main class="container">
         <section class="hero">
@@ -76,9 +79,7 @@
     </main>
 
 
-    <footer>
-        <div class="container">© <span id="y"></span> Valhal Exotics LLC. </div>
-    </footer>
+    <div id="footer"></div>
     <script src="assets/script.js"></script>
     <script>
         document.getElementById('y').textContent = new Date().getFullYear()
