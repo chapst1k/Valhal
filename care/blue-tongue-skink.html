@@ -1,320 +1,175 @@
 <!doctype html>
 <html lang="en">
 
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(function(){
-  $("#header").load("/partials/header.html");
-  $("#footer").load("/partials/footer.html");
-});
-</script>
-
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Northern Blue Tongue Skink • Care Sheet</title>
+    <meta name="description" content="Detailed care sheet for Northern Blue Tongue Skink.">
+    <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 
 <body>
-    <div id="header"></div>
+    <header class="header">
+        <div class="container nav">
+            <a class="brand" href="../index.html">Valhal Exotics</a>
+            <nav class="nav" aria-label="Main">
+                <a href="../animals.html">Animals</a>
+                <a href="index.html">Care Sheets</a>
+                <a href="https://www.morphmarket.com/stores/valhalexotics/">Contact</a>
+            </nav>
+        </div>
+    </header>
 
     <main class="container" style="display:grid;grid-template-columns:1fr;gap:18px">
         <div class="prose">
             <button class="btn print" data-print>Print</button>
-            <h1>Northern Walking Stick (Diapheromera femorata)</h1>
-            <p class="muted">Updated: <time datetime="2025-08-13">August 13, 2025</time></p>
+            <h1>Northern Blue Tongue Skink (Tiliqua scincoides intermedia)</h1>
+            <p class="muted">Updated: <time datetime="2025-08-14">August 14, 2025</time></p>
 
-            <section id="size">
-                <h2>Size</h2>
-                <p>Females up to 9.5cm (3.7in)</p>
-                <p>Males up to 7.5cm (3in)</p>
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>The Northern Blue Tongue Skink is the largest and one of the most popular species of blue tongues, native to northern Australia. Known for their calm demeanor and iconic blue tongues, they can live 20+ years with proper care, making them
+                    a long-term commitment.</p>
             </section>
 
-            <section id="moisture">
-                <h2>Moisture</h2>
-                <p>50–70% humidity</p>
-                <p>Spray daily, they enjoy a good drink</p>
-                <p>Early instars need higher humidity</p>
-            </section>
-
-            <section id="temperature">
-                <h2>Temperature</h2>
-                <p>22–27°C (72–80°F)</p>
-            </section>
-
-            <section id="sexing">
-                <h2>Sexing</h2>
-                <p>Sexable at i4/i5. Males will begin to develop claspers, pincer-like circi at the tip of the abdomen. Females will grow larger and more robust, and have a tapered abdomen. Females will develop a flat-end segment. Adult males are brown;
-                    females are greenish-brown and larger.</p>
-            </section>
-
-            <section id="lifespan">
-                <h2>Lifespan</h2>
-                <p>They appear to live anywhere from 4–6 months, including nymph stages. Mine generally follow the leaves, existing May–October. They naturally expire in time for the leaves to drop.</p>
-            </section>
-
-            <section id="instars">
-                <h2>Instars</h2>
-                <p>It is believed that they molt 7 times, maybe more. Phasmids eat their molts, so it's harder to track them. They molt similarly to a mantis, so please provide 4 times the length of the animal in molting space. Once they hit a larger instar
-                    they start growing FAST.</p>
-            </section>
-
-            <section id="feeding">
-                <h2>Feeding</h2>
-                <p>Young nymphs (i1/i2) may need their leaves torn or cut to allow easier eating. Replace leaves every 1–3 days depending on their state. Keep fresh leaves always available 24/7. Snip branches and keep the ends in a container of freshwater
-                    to keep them good longer. This species consumes Oak (Quercus sp.). I have successfully raised mine on white (Q. alba) and northern red (Q. rubra) with the occasional offering of pin oak (Q. palustris). Other varieties of oak are likely
-                    to work as well. They have also been known to host on cherry (Prunus sp.) and hazelnut (Corylus sp.).</p>
-
-                <!-- Food availability chart -->
-                <div class="table-scroll" role="region" aria-label="Seasonal leaf availability for food plants" tabindex="0">
-                    <table class="food-availability">
-                        <caption>Seasonal Leaf Availability (✓ = fresh, ~ = limited, — = none)</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Plant</th>
-                                <th scope="col">Jan</th>
-                                <th scope="col">Feb</th>
-                                <th scope="col">Mar</th>
-                                <th scope="col">Apr</th>
-                                <th scope="col">May</th>
-                                <th scope="col">Jun</th>
-                                <th scope="col">Jul</th>
-                                <th scope="col">Aug</th>
-                                <th scope="col">Sep</th>
-                                <th scope="col">Oct</th>
-                                <th scope="col">Nov</th>
-                                <th scope="col">Dec</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Oak</strong> (<em>Quercus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Hazel</strong> (<em>Corylus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Apple / Crabapple</strong> (<em>Malus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Cherry / Wild Cherry</strong> (<em>Prunus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Beech</strong> (<em>Fagus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Elm</strong> (<em>Ulmus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Maple</strong> (<em>Acer</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Hawthorn</strong> (<em>Crataegus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Bramble / Blackberry</strong> (<em>Rubus</em>)</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Rose</strong> (<em>Rosa</em>)</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Willow</strong> (<em>Salix</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Mulberry</strong> (<em>Morus</em>)</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="good">✓</td>
-                                <td data-val="limited">~</td>
-                                <td data-val="none">—</td>
-                                <td data-val="none">—</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /Food availability chart -->
+            <section id="size-lifespan">
+                <h2>Size & Lifespan</h2>
+                <ul>
+                    <li><strong>Adult Size:</strong> 18–24 inches (45–60 cm)</li>
+                    <li><strong>Weight:</strong> 450–700g</li>
+                    <li><strong>Lifespan:</strong> 15–20+ years in captivity</li>
+                </ul>
             </section>
 
             <section id="enclosure">
                 <h2>Enclosure</h2>
-                <p>Estimates for enclosure size are based on a cohabitated group of 10–15. For a single phasmid or a pair, a 1×1×1 ft pop up can be used. For large volumes of phasmids, I reccomend upsizing early and using a 24×24×36 inch pop up for adults.
-                    Bigger will not hurt.</p>
-                <p>Make sure fresh leaves are always available and that the container of water your leaves are in is sturdy. All of my individuals are cohabitated, never aggressive. They do however walk over each other, so I provide plenty of space for multiple
-                    individuals.</p>
-                <p>i1–i3: 32oz deli container with poke ventilation to retain humidity</p>
-                <p>i3–i5: 12×12×12 inch pop up mesh or larger</p>
-                <p>i6–adult: 15.7×15.7×23.6 inch pop up mesh or larger</p>
+                <ul>
+                    <li><strong>Minimum Size:</strong> Juveniles – 36"x18"x18"; Adults – 48"x24"x18–24"</li>
+                    <li>Secure, well-ventilated enclosure with multiple hides and a basking area</li>
+                    <li>Low climbing branches, logs, and flat basking rocks</li>
+                    <li>3–6 inches of diggable substrate (aspen, cypress mulch, orchid bark, or bioactive mix)</li>
+                    <li>Avoid pine or cedar substrates</li>
+                </ul>
             </section>
 
-            <section id="breeding">
-                <h2>Breeding</h2>
-                <p>Males will hitch a ride on the back of a female and connect abdomen for several hours. They are polygynandrous; females will mate many times with many males. One female can produce over 250 eggs each. Oviposition begins in late August,
-                    peaks during mid-September, and tails off at the end of September. Females will continue to lay until late October until most of the green foliage is no longer present.</p>
+            <section id="temperature-lighting">
+                <h2>Temperature & Lighting</h2>
+                <ul>
+                    <li><strong>Basking Spot:</strong> 95–105°F (35–40°C)</li>
+                    <li><strong>Warm Side:</strong> 85–90°F (29–32°C)</li>
+                    <li><strong>Cool Side:</strong> 75–80°F (24–27°C)</li>
+                    <li><strong>Night:</strong> 70–75°F (21–24°C)</li>
+                    <li><strong>UVB:</strong> Recommended T5 HO 10–12% UVB tube, 10–12 hours/day</li>
+                    <li><strong>Daylight Cycle:</strong> 12 hours light / 12 hours dark</li>
+                </ul>
             </section>
 
-            <section id="other-information">
-                <h2>Other Information</h2>
-                <p>These hatched after a chilled diapause of ~3 months+. Leave them to overwinter outside in a container or put them in a fridge. Make sure leaves are available when you pull them out of cold storage. I have occasionally noted an odd straggler
-                    that hatches way after others, often many months behind. I am still looking into this oddity.</p>
-                <p>Yes, they do the dance. Yes, you will get stickbugged.</p>
+            <section id="humidity-water">
+                <h2>Humidity & Water</h2>
+                <ul>
+                    <li><strong>Humidity:</strong> 35–50% (slightly higher during shed)</li>
+                    <li>Provide a large, shallow water bowl for soaking and drinking; change daily</li>
+                    <li>Mist lightly during shedding if needed, but avoid overly damp substrate</li>
+                </ul>
+            </section>
+
+            <section id="diet">
+                <h2>Diet</h2>
+                <p>Northern Blue Tongue Skinks are omnivores. Adults thrive on roughly 50% vegetables, 40% protein, and 10% fruit. Juveniles require more protein (up to 60%).</p>
+                <ul>
+                    <li><strong>Protein:</strong> Lean cooked meats (chicken, turkey, beef heart), boiled or scrambled eggs, high-quality canned dog food, insects (dubia roaches, crickets, mealworms, snails)</li>
+                    <li><strong>Vegetables:</strong> Collard greens, mustard greens, dandelion greens, squash, carrots, green beans</li>
+                    <li><strong>Fruit:</strong> Blueberries, strawberries, mango, papaya (avoid citrus)</li>
+                    <li><strong>Supplements:</strong> Calcium without D3 – 2–3× weekly; multivitamin – 1× weekly; with strong UVB, D3 only monthly</li>
+                </ul>
+            </section>
+
+            <section id="cleaning">
+                <h2>Cleaning</h2>
+                <ul>
+                    <li>Spot clean daily (feces, shed skin, leftover food)</li>
+                    <li>Full substrate change every 4–8 weeks (or maintain bioactive)</li>
+                    <li>Clean water dish daily with reptile-safe disinfectant</li>
+                </ul>
+            </section>
+
+            <section id="handling">
+                <h2>Handling</h2>
+                <ul>
+                    <li>Generally docile and tolerant of handling</li>
+                    <li>Support the entire body during handling</li>
+                    <li>Avoid grabbing the tail (they do not drop it, but it causes stress)</li>
+                    <li>Introduce handling gradually to new animals</li>
+                </ul>
+            </section>
+
+            <section id="health">
+                <h2>Common Health Issues</h2>
+                <ul>
+                    <li><strong>MBD:</strong> Caused by lack of UVB/calcium</li>
+                    <li><strong>Respiratory Infections:</strong> From low temps/high humidity</li>
+                    <li><strong>Obesity:</strong> From overfeeding fatty/protein-rich foods</li>
+                    <li><strong>Retained Shed:</strong> Especially on toes/tail—soak gently if needed</li>
+                </ul>
+            </section>
+
+            <section id="quick-summary">
+                <h2>Quick Care Summary</h2>
+                <table>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Recommendation</th>
+                    </tr>
+                    <tr>
+                        <td>Basking Temp</td>
+                        <td>95–105°F (35–40°C)</td>
+                    </tr>
+                    <tr>
+                        <td>Cool Side Temp</td>
+                        <td>75–80°F (24–27°C)</td>
+                    </tr>
+                    <tr>
+                        <td>Humidity</td>
+                        <td>35–50%</td>
+                    </tr>
+                    <tr>
+                        <td>UVB Lighting</td>
+                        <td>T5 HO 10–12%</td>
+                    </tr>
+                    <tr>
+                        <td>Adult Diet</td>
+                        <td>50% veg, 40% protein, 10% fruit</td>
+                    </tr>
+                    <tr>
+                        <td>Lifespan</td>
+                        <td>15–20+ years</td>
+                    </tr>
+                </table>
             </section>
         </div>
 
         <aside class="toc">
             <h4>On this page</h4>
-            <a href="#size">Size</a>
-            <a href="#moisture">Moisture</a>
-            <a href="#temperature">Temperature</a>
-            <a href="#sexing">Sexing</a>
-            <a href="#lifespan">Lifespan</a>
-            <a href="#instars">Instars</a>
-            <a href="#feeding">Feeding</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#size-lifespan">Size & Lifespan</a>
             <a href="#enclosure">Enclosure</a>
-            <a href="#breeding">Breeding</a>
-            <a href="#other-information">Other Information</a>
+            <a href="#temperature-lighting">Temperature & Lighting</a>
+            <a href="#humidity-water">Humidity & Water</a>
+            <a href="#diet">Diet</a>
+            <a href="#cleaning">Cleaning</a>
+            <a href="#handling">Handling</a>
+            <a href="#health">Common Health Issues</a>
+            <a href="#quick-summary">Quick Care Summary</a>
         </aside>
     </main>
 
-    <div id="footer"></div>
-
+    <footer>
+        <div class="container">© <span id="y"></span> Valhal Exotics LLC</div>
+    </footer>
     <script src="../assets/script.js"></script>
     <script>
-        document.getElementById('y').textContent = new Date().getFullYear();
+        document.getElementById('y').textContent = new Date().getFullYear()
     </script>
 </body>
 
