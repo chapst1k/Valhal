@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Valhal Exotics LLC • Kits Available</title>
+    <meta name="description" content="Available kits, current litters, and contact information." />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("/partials/header.html");
+            $("#footer").load("/partials/footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Fox Kits Available</h1>
+            <p>Photos, details, and contact information will be updated here regularly.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section style="margin: 32px 0;">
+            <h2>Contact</h2>
+            <p>To reserve a kit or ask questions, please reach out:</p>
+            <p><strong>Message Us On</strong> <a href="https://www.facebook.com/valhalexo" target="_blank">Facebook:</a></p>
+        </section>
+
+        <!-- Kits Grid -->
+        <h2 style="margin: 24px 0 8px;">Available Kits</h2>
+
+        <div class="grid">
+
+            <!-- Blank Card Template (Duplicate This as Needed) -->
+            <article class="card">
+                <img src="/assets/img/placeholder.jpg" alt="Kit Picture">
+                <h3>Kit Name / ID</h3>
+                <p class="muted">Born: Month Day, Year</p>
+                <p>Short description about the kit (temperament, color, parents, anything helpful).</p>
+                <p><strong>Price:</strong> $XXXX</p>
+                <a class="btn" href="mailto:YOUR_EMAIL_HERE">Inquire</a>
+            </article>
+
+            <!-- Example Duplicate -->
+            <article class="card">
+                <img src="/assets/img/placeholder.jpg" alt="Kit Picture">
+                <h3>Kit Name / ID</h3>
+                <p class="muted">Born: Month Day, Year</p>
+                <p>Description of this kit.</p>
+                <p><strong>Price:</strong> $XXXX</p>
+                <a class="btn" href="mailto:YOUR_EMAIL_HERE">Inquire</a>
+            </article>
+
+            <!-- Add as many as you want -->
+        </div>
+
+        <!-- If none available -->
+        <!--
+        <p class="muted" style="margin-top:20px;">No kits currently available. Check back soon or contact us to join a waiting list.</p>
+        -->
+
+    </main>
+
+    <div id="footer"></div>
+    <script src="assets/script.js"></script>
+
+</body>
+
+</html>
