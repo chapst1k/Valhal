@@ -2,98 +2,74 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valhal Exotics LLC • Home</title>
+  <meta name="description" content="Healthy captive-bred animals and clear care information." />
+  <link rel="stylesheet" href="assets/styles.css" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Valhal Exotics LLC • Home</title>
-    <meta name="description" content="Healthy captive-bred animals and clear care information." />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(function() {
-            $("#header").load("/partials/header.html");
-            $("#footer").load("/partials/footer.html");
-        });
-    </script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("/partials/header.html");
+      $("#footer").load("/partials/footer.html");
+    });
+  </script>
 </head>
 
 <body>
-    <div id="header"></div>
+  <div id="header"></div>
 
-    <main class="container">
-        <section class="hero">
-            <h1>Captive-bred, well started, responsibly raised.</h1>
-            <p>Browse available animals and read our straightforward care sheets that we wrote from experience.</p>
-            <div>
-                <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale">See Animals</a>
-                <a class="btn ghost" href="care/index.html">Read Care Sheets</a>
-            </div>
-        </section>
+  <main class="container">
+    <section class="hero">
+      <span class="badge">Modernized Experience</span>
+      <h1>Premium exotics, streamlined care, and a cleaner mobile-first experience.</h1>
+      <p class="muted">Find available animals quickly, browse updated species care sheets, and jump to social channels without digging through pages.</p>
+      <div class="hero__actions">
+        <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale" target="_blank" rel="noopener">See Available Animals</a>
+        <a class="btn ghost" href="/care/index.html">Read Care Sheets</a>
+      </div>
+    </section>
 
-        <h2 style="margin:24px 0 8px;">Featured</h2>
-        <div class="grid">
+    <section>
+      <h2>Featured Animals</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="/assets/img/fox.jpg" alt="Red fox" />
+          <h3>Red Fox</h3>
+          <p class="muted">Companion and handling basics in our full fox care write-up.</p>
+          <a class="btn" href="/fox.html" target="_blank" rel="noopener">Read Care Sheet</a>
+        </article>
 
-            <!-- Fox-->
+        <article class="card">
+          <img src="/assets/img/hognose.jpg" alt="Western hognose snake" />
+          <h3>Western Hognose</h3>
+          <p class="muted">Updated setup guidance plus feeding and enrichment notes.</p>
+          <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale" target="_blank" rel="noopener">View on MorphMarket</a>
+          <a class="btn ghost" href="/care/western-hognose.html">Care Sheet</a>
+        </article>
 
-            <article class="card">
-                <img src="/assets/img/fox.jpg" alt="Mantids">
-                <h3>Red Fox</h3>
-                <a class="btn" href="/fox.html" target="_blank" rel="noopener"> Read Our Care Sheet</a>
-                <!--<a class="btn" href="/kits-available.html" target="_blank" rel="noopener"> Available Kits</a> -->
+        <article class="card">
+          <img src="/assets/img/bts.jpg" alt="Blue tongue skink" />
+          <h3>Blue Tongue Skinks</h3>
+          <p class="muted">Species-friendly husbandry checklist with practical care targets.</p>
+          <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale" target="_blank" rel="noopener">View on MorphMarket</a>
+          <a class="btn ghost" href="/care/blue-tongue-skink.html">Care Sheet</a>
+        </article>
 
-                </a>
-            </article>
-            <!-- Western Hognose -->
-            <article class="card">
-                <img src="/assets/img/hognose.jpg" alt="Western Hognose">
-                <h3>Western Hognose</h3>
-                <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale" target="_blank" rel="noopener">
-        View on MorphMarket
-      </a>
-                </a>
-                <a class="btn ghost" href="/care/western-hognose.html">
-        Care Sheet
-      </a>
-            </article>
+        <article class="card">
+          <img src="/assets/img/mantis.jpg" alt="Praying mantis" />
+          <h3>Mantids</h3>
+          <p class="muted">Quickly filter species pages with care targets and molt-safe setup notes.</p>
+          <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale" target="_blank" rel="noopener">View on MorphMarket</a>
+          <a class="btn ghost" href="/care/index.html#mantids">Care Sheets</a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-            <!-- Blue Tongue Skinks -->
-            <article class="card">
-                <img src="/assets/img/bts.jpg" alt="Blue Tongue Skink">
-                <h3>Blue Tongue Skinks</h3>
-                <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale" target="_blank" rel="noopener">
-        View on MorphMarket
-      </a>
-                </a>
-                <a class="btn ghost" href="/care/blue-tongue-skink.html">
-        Care Sheet
-      </a>
-            </article>
-
-            <!-- Mantids -->
-            <article class="card">
-                <img src="/assets/img/mantis.jpg" alt="Mantids">
-                <h3>Mantids</h3>
-                <a class="btn" href="https://www.morphmarket.com/us/c/all?seller=valhalexotics&state=for_sale" target="_blank" rel="noopener">
-        View on MorphMarket
-      </a>
-                <a class="btn ghost" href="/care/index.html#mantids">
-        Care Sheet
-      </a>
-            </article>
-
-        </div>
-    </main>
-
-
-    <div id="footer"></div>
-    <script src="assets/script.js"></script>
-    <script>
-        document.getElementById('y').textContent = new Date().getFullYear()
-    </script>
+  <div id="footer"></div>
+  <script src="assets/script.js"></script>
 </body>
 
 </html>
