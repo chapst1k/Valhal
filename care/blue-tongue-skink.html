@@ -168,8 +168,7 @@
     </footer>
     <script src="../assets/script.js"></script>
     <script>
-        document.getElementById('y').textContent = new Date().getFullYear()
-    </script>
+        (function(){var el=document.getElementById('y'); if(el) el.textContent=new Date().getFullYear();})();</script>
 </body>
 
 </html>

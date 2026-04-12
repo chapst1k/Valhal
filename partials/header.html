@@ -1,11 +1,32 @@
 <header class="header">
-    <div class="container nav">
-        <a class="brand" href="../index.html">Valhal Exotics</a>
-        <nav class="nav" aria-label="Main">
-            <a href="../animals.html">Animals</a>
-            <a href="index.html">Care Sheets</a>
-            <a href="https://www.morphmarket.com/stores/valhalexotics/" target="_blank" rel="noopener">Contact</a>
-            <a href="https://www.facebook.com/valhalexo" target="_blank" rel="noopener"> Facebook</a>
-        </nav>
-    </div>
+  <div class="container header__inner">
+    <a class="brand" href="/index.html">Valhal Exotics</a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="menu">
+        <li><a class="menu__link" href="/index.html">Home</a></li>
+        <li><a class="menu__link" href="/animals.html">Animals</a></li>
+
+        <li class="has-dropdown">
+          <button class="menu__trigger" aria-expanded="false">Care Sheets ▾</button>
+          <ul class="dropdown" aria-label="Care categories">
+            <li><a href="/care/index.html">All Care Sheets</a></li>
+            <li><a href="/care/index.html#mantids">Mantids</a></li>
+            <li><a href="/care/western-hognose.html">Western Hognose</a></li>
+            <li><a href="/care/blue-tongue-skink.html">Blue Tongue Skink</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <button class="menu__trigger" aria-expanded="false">Community ▾</button>
+          <ul class="dropdown" aria-label="Community links">
+            <li><a href="https://www.morphmarket.com/stores/valhalexotics/" target="_blank" rel="noopener">MorphMarket Store</a></li>
+            <li><a href="https://www.facebook.com/valhalexo" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
