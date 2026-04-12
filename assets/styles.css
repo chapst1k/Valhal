@@ -88,6 +88,61 @@ a:hover {
     margin-right: auto
 }
 
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: transparent;
+    color: var(--link);
+    border: 0;
+    font: inherit;
+    padding: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+    text-decoration: underline;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 220px;
+    display: none;
+    flex-direction: column;
+    background: var(--panel-2);
+    border: 1px solid var(--ring);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 8px;
+    z-index: 100;
+}
+
+.dropdown-menu a {
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: flex;
+}
+
+.sale-grid {
+    display: grid;
+    gap: 18px;
+}
+
+@media(min-width:720px) {
+    .sale-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .hero {
     display: grid;
     gap: 18px;
