@@ -32,8 +32,15 @@
     <div id="header"></div>
 
     <main class="container">
-        <h1>Care Sheets</h1>
-        <p class="muted">Click a species to read and print.</p>
+        <section class="hero care-hero">
+            <span class="eyebrow">Care Library</span>
+            <h1>Care Sheets</h1>
+            <p class="care-lead">Clean husbandry notes, quick setup guidance, and species-specific references in one place. Start with featured mammals and reptiles, then browse the full collection.</p>
+            <div class="hero-actions">
+                <a class="btn" href="african-dormice.html">Read African Dormice Care</a>
+                <a class="btn ghost" href="#mantids">Browse Mantids</a>
+            </div>
+        </section>
 
         <!-- Search -->
         <input id="careSearch" placeholder="Search care sheets…" style="width:100%;padding:.6rem .9rem;border-radius:12px;
@@ -44,7 +51,32 @@
             No care sheets match your search.
         </p>
 
-        <!-- Hognose & Blue Tongue Section (unchanged) -->
+        <section class="care-group" data-group="featured-mammals">
+            <h2>Featured Mammals &amp; Reptiles</h2>
+            <div class="care-index-grid">
+                <article class="card care-card">
+                    <span class="badge">New</span>
+                    <h3>African Dormice <small class="muted">(<em>Graphiurus murinus</em>)</small></h3>
+                    <p>Setup basics, temperature guidance, feeding rotation, enrichment, and handling notes for these active little nocturnal climbers.</p>
+                    <a class="btn" href="african-dormice.html">Read Care</a>
+                </article>
+
+                <article class="card care-card">
+                    <span class="badge">Popular</span>
+                    <h3>Western Hognose</h3>
+                    <p>Clear husbandry details, temperature gradients, feeding cadence, and practical setup notes for one of our most-read care pages.</p>
+                    <a class="btn" href="western-hognose.html">Read Care</a>
+                </article>
+
+                <article class="card care-card">
+                    <h3>Blue Tongue Skink</h3>
+                    <p>Detailed enclosure, diet, heating, and routine care guidance for Northern Blue Tongue Skinks.</p>
+                    <a class="btn" href="blue-tongue-skink.html">Read Care</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Hognose & Blue Tongue Section -->
         <section class="care-group" data-group="hognose-blue">
             <h2>Hognose Snakes & Blue Tongue Skinks</h2>
             <div class="grid-2">
@@ -153,9 +185,9 @@
                 </article>
 
                 <article class="card">
-                    <h3>PNG Matis (<em>Rhombodera Kirbyi</em>)</h3>
+                    <h3>PNG Mantis (<em>Rhombodera kirbyi</em>)</h3>
                     <p>Read husbandry details and feeding notes.</p>
-                    <a class="btn" href="budwing-parasphendale-agrionina.html">Read Care</a>
+                    <a class="btn" href="png-mantis-rhombodera-kirbyi.html">Read Care</a>
                 </article>
 
                 <article class="card">

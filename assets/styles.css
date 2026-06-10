@@ -163,6 +163,28 @@ a:hover {
     color: var(--muted)
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .35rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(127, 183, 126, .3);
+    background: rgba(127, 183, 126, .08);
+    color: #cfe6cf;
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
 .grid {
     display: grid;
     gap: 18px
@@ -183,6 +205,110 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 12px
+}
+
+.card p {
+    margin: 0;
+}
+
+.care-hero {
+    margin-bottom: 22px;
+}
+
+.care-group {
+    margin-top: 28px;
+}
+
+.care-group h2 {
+    margin-bottom: 14px;
+}
+
+.care-index-grid {
+    display: grid;
+    gap: 18px;
+}
+
+@media (min-width:720px) {
+    .care-index-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.care-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.care-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(127, 183, 126, .12), transparent 42%);
+    pointer-events: none;
+}
+
+.care-card>* {
+    position: relative;
+}
+
+.care-card .badge {
+    align-self: flex-start;
+}
+
+.care-card .btn {
+    margin-top: auto;
+    width: fit-content;
+}
+
+.care-lead {
+    font-size: 1.02rem;
+    max-width: 64ch;
+}
+
+.stat-grid {
+    display: grid;
+    gap: 14px;
+    margin: 18px 0 6px;
+}
+
+@media (min-width:720px) {
+    .stat-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.stat-card {
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid var(--ring);
+    background: linear-gradient(180deg, rgba(127, 183, 126, .08), rgba(20, 24, 22, .95));
+    box-shadow: var(--shadow);
+}
+
+.stat-card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #d8ead8;
+}
+
+.info-banner {
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    border-left: 4px solid var(--accent);
+    border-radius: 14px;
+    background: rgba(127, 183, 126, .08);
+}
+
+.section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 16px;
+    align-items: baseline;
+}
+
+.section-heading p {
+    margin: 0;
 }
 
 .badge {
